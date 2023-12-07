@@ -2,6 +2,7 @@ import os
 import argparse
 from PyPDF2 import PdfMerger
 
+
 def merge_pdfs(directory):
     # Get a list of PDF files in the directory
     pdf_files = [file for file in os.listdir(directory) if file.endswith('.pdf')]
@@ -23,7 +24,8 @@ def merge_pdfs(directory):
     merger.write(output_file)
     merger.close()
 
-    print(f"Merged PDF file saved as '{output_file}'")
+    print(f"\nMerged PDF file saved as '{output_file}' !!! \n")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Merge multiple PDFs from a directory into one.')
